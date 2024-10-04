@@ -78,7 +78,7 @@ plastic_data_all %>%
   group_by(region) %>%
     summarise(frequency = n_distinct(name))
 ```
-
+Africa has the largest number of coastal countries/territories.
 
 
 ### Ex 2.
