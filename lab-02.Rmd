@@ -87,6 +87,9 @@ Africa has the largest number of coastal countries/territories.
 # Write your code here to answer exercise 2
 mutate(plastic_data_all, total_mismanage_plastic = mismanaged_plastic * population)
 
+plastic_data_all %>%
+  group_by(region)%>%
+  summarise(mean_per_region=mean(total_mismanage_plastic, na.rm=TRUE))
 
 ```
 

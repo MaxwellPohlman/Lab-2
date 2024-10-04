@@ -455,6 +455,12 @@ mutate(plastic_data_all, total_mismanage_plastic = mismanaged_plastic * populati
 ## # ℹ 149 more rows
 ## # ℹ abbreviated name: ¹​mismanaged_plastic_ocean
 ## # ℹ 1 more variable: total_mismanage_plastic &lt;dbl&gt;</code></pre>
+<pre class="r"><code>plastic_data_all %&gt;%
+  group_by(region)%&gt;%
+  mean(total_mismanage_plastic)</code></pre>
+<pre><code>## Warning in mean.default(., total_mismanage_plastic): argument is not numeric or
+## logical: returning NA</code></pre>
+<pre><code>## [1] NA</code></pre>
 </div>
 <div id="ex-3." class="section level3">
 <h3>Ex 3.</h3>
