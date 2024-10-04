@@ -91,7 +91,10 @@ plastic_data_all %>%
   group_by(region) %>%
   summarise(mean_per_region= mean(total_mismanage_plastic))
 
+
 ```
+Asia is the highest
+Oceania is the lowest
 
 
 ### Ex 3.
