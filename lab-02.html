@@ -361,7 +361,8 @@ Andrew</h4>
 <div id="load-packages-and-data" class="section level3">
 <h3>Load packages and data</h3>
 <pre class="r"><code>library(tidyverse)
-library(readxl)</code></pre>
+library(readxl)
+library(dplyr)</code></pre>
 </div>
 <div id="load-join-data-sets" class="section level2">
 <h2>Load &amp; join data sets</h2>
@@ -419,7 +420,19 @@ plastic_data_all %&gt;% head(n = 10)</code></pre>
 <h2>Exercises</h2>
 <div id="ex-1." class="section level3">
 <h3>Ex 1.</h3>
-<pre class="r"><code># Write your code here to answer exercise 1</code></pre>
+<pre class="r"><code># Frequency Tables
+plastic_data_all %&gt;%
+  group_by(region) %&gt;%
+    summarise(frequency = n_distinct(name))</code></pre>
+<pre><code>## # A tibble: 6 × 2
+##   region                          frequency
+##   &lt;chr&gt;                               &lt;int&gt;
+## 1 Africa                                 43
+## 2 Asia                                   39
+## 3 Europe                                 31
+## 4 Latin America and The Caribbean        34
+## 5 North America                           2
+## 6 Oceania                                10</code></pre>
 </div>
 <div id="ex-2." class="section level3">
 <h3>Ex 2.</h3>
